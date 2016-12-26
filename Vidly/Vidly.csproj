@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -218,9 +219,26 @@
     <Compile Include="Migrations\201612221245465_addmovies.Designer.cs">
       <DependentUpon>201612221245465_addmovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612231208149_addmembershiptypes.cs" />
+    <Compile Include="Migrations\201612231208149_addmembershiptypes.Designer.cs">
+      <DependentUpon>201612231208149_addmembershiptypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612260358292_addmembershipname.cs" />
+    <Compile Include="Migrations\201612260358292_addmembershipname.Designer.cs">
+      <DependentUpon>201612260358292_addmembershipname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612260410266_addgenre.cs" />
+    <Compile Include="Migrations\201612260410266_addgenre.Designer.cs">
+      <DependentUpon>201612260410266_addgenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612260419369_addgenresnames.cs" />
+    <Compile Include="Migrations\201612260419369_addgenresnames.Designer.cs">
+      <DependentUpon>201612260419369_addgenresnames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -228,6 +246,7 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -291,10 +310,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -316,6 +339,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612221245465_addmovies.resx">
       <DependentUpon>201612221245465_addmovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612231208149_addmembershiptypes.resx">
+      <DependentUpon>201612231208149_addmembershiptypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612260358292_addmembershipname.resx">
+      <DependentUpon>201612260358292_addmembershipname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612260410266_addgenre.resx">
+      <DependentUpon>201612260410266_addgenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612260419369_addgenresnames.resx">
+      <DependentUpon>201612260419369_addgenresnames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
