@@ -13,14 +13,21 @@ namespace Vidly.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Required]
+        
         public Genre Genre { get; set; }
+
+        [Display(Name = "Genre")]
+        [Required(ErrorMessage = "Genre required")]
         public byte GenreId { get; set; }
 
         public DateTime DateAdded { get; set; }
 
+        [Display(Name = "Release Date")]
+        [Required(ErrorMessage = "Release Date is required")]
         public DateTime ReleaseDate { get; set; }
 
+        [Display(Name = "Number in Stock")]
+        [Required(ErrorMessage ="Please enter a number"), Range(1,20)]
         public byte NumberInStock { get; set; }
 
     }

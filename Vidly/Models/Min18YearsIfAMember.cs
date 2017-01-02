@@ -12,7 +12,8 @@ namespace Vidly.Models
         {
             var customer = (Customer)validationContext.ObjectInstance;
 
-            if (customer.MembershipTypeId == 0 ||customer.MembershipTypeId == 1)
+            if (customer.MembershipTypeId == MembershipType.Unknown ||
+                customer.MembershipTypeId == MembershipType.PayAsYouGo)
                 return ValidationResult.Success;
 
             if (customer.Birthdate == null)
@@ -22,7 +23,7 @@ namespace Vidly.Models
 
             return (age >= 18)
                 ? ValidationResult.Success
-                : new ValidationResult("Customer should be at least 18 years old");
+                : new ValidationResult("Customer should be at least 18 years old to on a Membership");
         }
     }
 }
