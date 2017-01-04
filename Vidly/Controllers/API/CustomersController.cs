@@ -38,7 +38,7 @@ namespace Vidly.Controllers.API
 
         //POST /api/customers
         [HttpPost]
-        public IHttpActionResult CreateCusotmer(CustomerDto customerDto)
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
